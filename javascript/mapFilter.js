@@ -22,14 +22,22 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(map);
 
 
-// CLUSTER DES ICONES / TYPE 
+// CLUSTER DES ICONES / TYPE
 
 // GESTION POINTS BONS PLANS ECT..
 var iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-    evt.layer.bindPopup(L.Util.template('{image}<p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
+    evt.layer.bindPopup(L.Util.template('<a class="add-to-visit" href="#"><i class="fa fa-suitcase"></i>ajouter au la visite</a>{image}<br><p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
         className: 'leaflet-popup-info',
         minWidth: 400
     });
+    console.log("test");
+    $(".add-to-visit").on("click", function (event) {
+      event.preventDefault();
+      // $(".add-to-visit").effect( "bounce", { times : 3 }, 300);
+      console.log("test");
+      $(".add-to-visit").addClass('slide-up');
+  });
+
 });
 
 // Gestion des questions
@@ -38,6 +46,14 @@ var questionLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click
         className: 'leaflet-popup-info',
         minWidth: 400
     });
+});
+
+document.addEventListener("DOMContentLoaded", function(e) {
+  console.log("tes")
+  // document.getElementsByClasseName.on("click", function (event) {
+  //     console.log("test");
+  //     this.effect( "bounce", { times : 3 }, 300);
+  // });
 });
 
 // GESTION POINTS INSTAGRAM
@@ -103,4 +119,4 @@ function filtre(filtre_nom) {
     ajaxInfos();
 
 }
-// FIN CLUSTER DES ICONES / TYPE 
+// FIN CLUSTER DES ICONES / TYPE
