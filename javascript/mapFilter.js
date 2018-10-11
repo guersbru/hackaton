@@ -26,7 +26,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 // GESTION POINTS BONS PLANS ECT..
 var iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', function (evt) {
-    evt.layer.bindPopup(L.Util.template('<a class="add-to-visit" href="#"><i class="fa fa-suitcase"></i>ajouter au la visite</a>{image}<br><p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
+    evt.layer.bindPopup(L.Util.template('<a class="add-to-visit" href="#"><i class="fa fa-suitcase"></i>ajouter à la visite</a>{image}<br><p><a href="{lien}" target="_blank">{title}</a><br>{caption}</p>', evt.layer.photo), {
         className: 'leaflet-popup-info',
         minWidth: 400
     });
@@ -34,7 +34,6 @@ var iconLayer = L.photo.cluster({spiderfyDistanceMultiplier: 1.6}).on('click', f
     $(".add-to-visit").on("click", function (event) {
       event.preventDefault();
       // $(".add-to-visit").effect( "bounce", { times : 3 }, 300);
-      console.log("test");
       $(".add-to-visit").addClass('slide-up');
   });
 
