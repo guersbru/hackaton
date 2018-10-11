@@ -30,10 +30,18 @@
 
     <article>
       <!-- Full width -->
+        <div class="navbar-kostas ">
           <img class="logo" src="media/logo/code4marseille.png" alt="logo">
+          <img class="tronche" src="media/logo/kostas.png" id="navbar-wagon-menu" data-toggle="dropdown">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="html/new/ma_visite.html"><i class="fa fa-suitcase"></i> Ma Visite</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i> Me déconnecter</a></li>
+          </ul>
+
+        </div>
           <section id="intro" class="text-center col-xs-12 ml-auto mr-auto">
             <!-- Background animé avec jquery et hashtag -->
-            <h1 id="titre" class="animated bounce"> Découvrez en direct les merveilles de la Provence</h1>
+            <h1 id="titre" class="animated bounce"> Bienvenue en Provence Mitrogoal</h1>
             <div id="alternate">
               <h2 id="lieux" class="text-center col-xs-12 ml-auto mr-auto boutonanime "></h2>
             </div>

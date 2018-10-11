@@ -442,6 +442,33 @@
 .leaflet-container a.leaflet-popup-close-button:hover {
 	color: #999;
 	}
+
+.leaflet-popup-content {
+  position:relative;
+
+}
+
+a.add-to-visit:hover {
+  color: red;
+  text-decoration: none;
+}
+
+a.add-to-visit {
+  position: absolute;
+  top: 5px;
+
+  /*transition: top 2s ease-out;*/
+
+}
+
+a.slide-up {
+  top: -100vh;
+  opacity: 0;
+  transition: opacity .5s ease-in 1s, top 1s ease-out, transform 1s ease-out;
+  transform: translateX(200%);
+}
+
+
 .leaflet-popup-scrolled {
 	overflow: auto;
 	border-bottom: 1px solid #ddd;
