@@ -2,7 +2,7 @@
 <html>
 <head>
   <style type="text/css">
-  /* -------------------------------- 
+  /* --------------------------------
 
 Primary style
 
@@ -37,7 +37,7 @@ h1, h2 {
   font-weight: bold;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -48,7 +48,7 @@ Patterns - reusable parts of our design
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Vertical Timeline - by CodyHouse.co
 
@@ -83,12 +83,13 @@ header h1 {
 
 .cd-timeline__container {
   position: relative;
-  width: 90%;
   max-width: 1170px;
   margin: 0 auto;
   padding: 2em 0;
   background-color: #f5f5f5;
   padding:10px;
+  border-radius: 5px;
+  padding-left:20px
 }
 
 .cd-timeline__container::before {
@@ -100,12 +101,13 @@ header h1 {
   height: 100%;
   width: 4px;
   background:grey;
+  ;
 
 }
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline {
-    margin-top: 3em;
+    margin-top: 2em;
     margin-bottom: 3em;
   }
   .cd-timeline__container::before {
@@ -435,16 +437,30 @@ header h1 {
             transform: translateX(0);
   }
 }
+
+.boutons {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding:5px;
+}
+
+h1, h3, p {
+  font-family: Roboto !important;
+}
+
+.activity-desc {
+  font-family: Roboto;
+  font-size: 12px !important;
+  text-align: justify;
+}
 </style>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-  <link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
-    
+
   <title>Ma Visite</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <!-- Leaflet CDN -->
@@ -455,7 +471,7 @@ header h1 {
 <body>
   <div class="container">
     <div class="row">
-        <div class="col-12 ml-3 my-3" style="height: 3rem;">
+        <div class="col-12 ml-3 my-3" style="height: 4rem;">
             <a href="../../">
               <img class="logo h-100" src="../../media/logo/code4marseille.png" alt="logo">
             </a>
@@ -464,32 +480,36 @@ header h1 {
           <hr>
         </div>
     </div>
-    <div class="row" style="height:200px; margin-top:40px">
+    <div class="row" style="margin-top:40px">
 
       <div class="col-sm-4" style="text-align: center">
-        <img style="border-radius: 50%; height: 200px" src="../../media/logo/kostas2.png" alt="">
+        <img style="border-radius: 50%; height: 150px" src="../../media/logo/kostas2.png" alt="">
       </div>
       <div class="col-sm-8" style="display:flex; flex-direction:column; justify-content: center">
-          <h1 style="margin-bottom: 0px; opacity: 0.7">Kostas Mitroglou</h1>
+          <h1 style="margin-bottom: 0px; opacity: 0.7; font-size:35px">Kostas Mitroglou </h1>
           <h2 style="opacity: 0.7">mitrogoal@ajamaislespremier.om</h2>
       </div>
     </div>
-<header style="position:relative">
-    <img style="position: absolute; top: 10px; right:10px; height:20px" class="image_timeline" src="../../media/logo/partage.png" alt="Picture">
-    <div class="cd-nugget-info">
-      
-        <span>
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-            <style type="text/css">
-              .cd-nugget-info-arrow{fill:#383838;}
-            </style>
-            <polygon class="cd-nugget-info-arrow" points="15,7 4.4,7 8.4,3 7,1.6 0.6,8 0.6,8 0.6,8 7,14.4 8.4,13 4.4,9 15,9 "/>
-          </svg>
-        </span>
-        
-      </a>
+<header style="background-color: #8f98a0;position:relative; display:flex; justify-content: space-between; align-items: center; border-radius: 5px">
+    <div class="cd-nugget-info" style="padding-left: 30px ">
+      <h1 style="padding-top:5px; text-align:left"><strong>Ma Visite</strong> </h1>
+      <p style="color:white; font-size:15px; text-align:left; opacity:0.9"> Il vous faudra un minimum de <span class="badge badge-danger">2 jours</span> pour réaliser votre programme</p>
     </div> <!-- cd-nugget-info -->
-    <h1>Ma visite </h1>
+    <div style="display:flex margin-right:20px">
+      <div class="boutons">
+        <i class="fa fa-share" style= "font-size:25px; color:white"></i>
+        <p style="color:white">Partager</p>
+      </div>
+      <div class="boutons">
+        <i class="fa fa-link" style= "font-size:25px; color:white"></i>
+        <p style="color:white">Lien</p>
+      </div>
+      <div class="boutons">
+        <i class="fa fa-edit" style= "font-size:25px; color:white"></i>
+        <p style="color:white">Modifier</p>
+      </div>
+    </div>
+
   </header>
 
   <section class="cd-timeline js-cd-timeline">
@@ -501,7 +521,7 @@ header h1 {
 
         <div class="cd-timeline__content js-cd-content">
           <h2>Kayak de mer</h2>
-          <p>Une randonnée magique en demi journée pour découvrir par la mer les Calanques de Cassis et se faire une pause dans la célèbre calanque d’En Vau avec Kayak Cassis Parcours Après un briefing sur l’utilisation d’une pagaie et d’un kayak par un guide exceptionnel les kayaks seront mis à l’eau dans la calanque de Port Miou. Ce sera le moment pour vous de mettre en application les explications théoriques de votre guide et de donner vos premiers coups de pagaie en kayak. vous évoluerez ensuite vers la calanque de Port Pin bordées par ces pins d’Alep puis la calanque d’En Vau où vous pourrez observer ces hautes parois rocheuses de calcaire et ces eaux de couleur bleu turquoise. La durée de la randonnée est de 3 heures Lieu de rendez vous Parking de la Madie à Cassis à 9h – 13h30 ou 15h30 en fonction de votre réservation.</p>
+          <p class="activity-desc">Une randonnée magique en demi journée pour découvrir par la mer les Calanques de Cassis et se faire une pause dans la célèbre calanque d’En Vau avec Kayak Cassis Parcours Après un briefing sur l’utilisation d’une pagaie et d’un kayak par un guide exceptionnel les kayaks seront mis à l’eau dans la calanque de Port Miou. Ce sera le moment pour vous de mettre en application les explications théoriques de votre guide et de donner vos premiers coups de pagaie en kayak. vous évoluerez ensuite vers la calanque de Port Pin bordées par ces pins d’Alep puis la calanque d’En Vau où vous pourrez observer ces hautes parois rocheuses de calcaire et ces eaux de couleur bleu turquoise. La durée de la randonnée est de 3 heures Lieu de rendez vous Parking de la Madie à Cassis à 9h – 13h30 ou 15h30 en fonction de votre réservation.</p>
           <div style="text-align:center">
             <img class="image_timeline" src="../../media/logo/raskas-kayak.jpg" alt="Picture">
           </div>
@@ -527,15 +547,14 @@ header h1 {
 
         <div class="cd-timeline__content js-cd-content">
           <h2>Le stade vélodrome</h2>
-          <p>Le stade, inauguré en 1937, accueillait à l’origine d’autres manifestations sportives (arrivées du Tour de France cycliste, championnats du monde de vélo sur piste (d’où son nom), des compétitions d’athlétisme, de gymnastique, de boxe et de rugby).
+          <p class="activity-desc">Le stade, inauguré en 1937, accueillait à l’origine d’autres manifestations sportives (arrivées du Tour de France cycliste, championnats du monde de vélo sur piste (d’où son nom), des compétitions d’athlétisme, de gymnastique, de boxe et de rugby).
 
           Le stade s’est transformé au fil des grands rendez-vous comme le Championnat du Monde en 1984, la Coupe du Monde de 1998 et l’Euro de 2016.
           C’est désormais un stade moderne de 67 000 places couvert, répondant aux dernières normes en matière d’accessibilité et d’énergie</p>
             <div style="text-align:center">
           <img class="image_timeline" src="../../media/logo/velodrome.jpg" alt="le stade orange vélodrome">
         </div>
-     
-          <span class="cd-timeline__date">BUS-METRO
+          <span class="cd-timeline__date">Accès : Bus ou Métro
             <br>Orange vélodrome
             13007 MARSEILLE<br>
             Tel : 04 91 59 02 30<br>
@@ -552,12 +571,12 @@ header h1 {
 
         <div class="cd-timeline__content js-cd-content">
           <h2>le marché aux poissons à Carro </h2>
-          <p>Tous les matins se tient sur le Port de Carro, le marché aux poissons frais; la quantité dépend donc de l'arrivage du jour. Autant y être très tôt le matin ! Cependant, la qualité des produits est souvent au rendez-vous. L'un des rares marchés "comme avant", loin des flux touristiques. Un lieu vraiment atypique ! A proximité : plage, jeu de pétanque, spot de surf, restaurants, promenade ....</p>
+          <p class="activity-desc">Tous les matins se tient sur le Port de Carro, le marché aux poissons frais; la quantité dépend donc de l'arrivage du jour. Autant y être très tôt le matin ! Cependant, la qualité des produits est souvent au rendez-vous. L'un des rares marchés "comme avant", loin des flux touristiques. Un lieu vraiment atypique ! A proximité : plage, jeu de pétanque, spot de surf, restaurants, promenade ....</p>
             <div style="text-align:center">
           <img class="image_timeline" src="../../media/logo/marché.jpg" alt="le marché aux poissons de Carro">
         </div>
         
-          <span class="cd-timeline__date">BUS-VOITURE<br>
+          <span class="cd-timeline__date">Accès : Bus ou Voiture<br>
             Le marché aux poissons de Carro
             13007 CARRO<br>
             Tel : 04 91 59 02 30<br>
@@ -574,12 +593,12 @@ header h1 {
 
         <div class="cd-timeline__content js-cd-content">
           <h2>Le château d'If</h2>
-          <p>C’est en 1516, que le roi François Ier eu l’idée de construire une forteresse sur l’île d’if, lors d’une visite à Marseille. L’édifice devint alors très vite une prison en raison de son isolement, rendant ainsi l’évasion de prisonniers plus complexe. On y comptait d’ailleurs le célèbre prisonnier José Custodio Faria, rendu immortel par Alexandre Dumas, auteur du Comte de Monte-Cristo. Le site regorge de “petites histoires”. On peut y voir notamment le légendaire trou creusé dans le mur par Edmond Dantès lors de son évasion. La forteresse finira par accueillir les insurgés de 1848 et les communards de 1871. Elle perdra sa vocation carcérale, avant d’être ouverte au grand public en 1890.</p>
+          <p class="activity-desc">C’est en 1516, que le roi François Ier eu l’idée de construire une forteresse sur l’île d’if, lors d’une visite à Marseille. L’édifice devint alors très vite une prison en raison de son isolement, rendant ainsi l’évasion de prisonniers plus complexe. On y comptait d’ailleurs le célèbre prisonnier José Custodio Faria, rendu immortel par Alexandre Dumas, auteur du Comte de Monte-Cristo. Le site regorge de “petites histoires”. On peut y voir notamment le légendaire trou creusé dans le mur par Edmond Dantès lors de son évasion. La forteresse finira par accueillir les insurgés de 1848 et les communards de 1871. Elle perdra sa vocation carcérale, avant d’être ouverte au grand public en 1890.</p>
             <div style="text-align:center">
           <img class="image_timeline" src="../../media/logo/dif.jpg" alt="le château d'If">
         </div>
-          
-          <span class="cd-timeline__date">NAVETTE MARITIME 
+
+          <span class="cd-timeline__date">NAVETTE MARITIME
             <br>Les îles
             13007 MARSEILLE<br>
             Tel : 04 91 59 02 30<br>
@@ -587,11 +606,85 @@ header h1 {
             Site internet : http://www.if.monuments-nationaux.fr</span>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
-
+    </div>
   </section> <!-- cd-timeline -->
-  
-<script src="js/main.js"></script> <!-- Resource JavaScript -->
+
+<script>
+(function(){
+    // Vertical Timeline - by CodyHouse.co
+  function VerticalTimeline( element ) {
+    this.element = element;
+    this.blocks = this.element.getElementsByClassName("js-cd-block");
+    this.images = this.element.getElementsByClassName("js-cd-img");
+    this.contents = this.element.getElementsByClassName("js-cd-content");
+    this.offset = 0.8;
+    this.hideBlocks();
+  };
+
+  VerticalTimeline.prototype.hideBlocks = function() {
+    //hide timeline blocks which are outside the viewport
+    if ( !"classList" in document.documentElement ) {
+      return;
+    }
+    var self = this;
+    for( var i = 0; i < this.blocks.length; i++) {
+      (function(i){
+        if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
+          self.images[i].classList.add("cd-is-hidden");
+          self.contents[i].classList.add("cd-is-hidden");
+        }
+      })(i);
+    }
+  };
+
+  VerticalTimeline.prototype.showBlocks = function() {
+    if ( ! "classList" in document.documentElement ) {
+      return;
+    }
+    var self = this;
+    for( var i = 0; i < this.blocks.length; i++) {
+      (function(i){
+        if( self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+          // add bounce-in animation
+          self.images[i].classList.add("cd-timeline__img--bounce-in");
+          self.contents[i].classList.add("cd-timeline__content--bounce-in");
+          self.images[i].classList.remove("cd-is-hidden");
+          self.contents[i].classList.remove("cd-is-hidden");
+        }
+      })(i);
+    }
+  };
+
+  var verticalTimelines = document.getElementsByClassName("js-cd-timeline"),
+    verticalTimelinesArray = [],
+    scrolling = false;
+  if( verticalTimelines.length > 0 ) {
+    for( var i = 0; i < verticalTimelines.length; i++) {
+      (function(i){
+        verticalTimelinesArray.push(new VerticalTimeline(verticalTimelines[i]));
+      })(i);
+    }
+
+    //show timeline blocks on scrolling
+    window.addEventListener("scroll", function(event) {
+      if( !scrolling ) {
+        scrolling = true;
+        (!window.requestAnimationFrame) ? setTimeout(checkTimelineScroll, 250) : window.requestAnimationFrame(checkTimelineScroll);
+      }
+    });
+  }
+
+  function checkTimelineScroll() {
+    verticalTimelinesArray.forEach(function(timeline){
+      timeline.showBlocks();
+    });
+    scrolling = false;
+  };
+})();
+
+</script> <!-- Resource JavaScript -->
 
 
-  </div>
+
+
 </body>
